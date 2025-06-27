@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/headphones-icon.png" type="image/svg+xml" />
+    <title>PodcastHub</title>
+</head>
+
+<body>
+    <!-- markup for header of the podcast -->
+    <header class="header-container">
+        <div class="innerHeader-container container">
+            <div class="rightSide-icons">
+                <img src="images/headphones-icon.png" alt="headphones picture">
+                <h1>Podcast<span>Hub</span> </h1>
+            </div>
+            <div class="leftSide-icons">
+                <img src="images/profile-picture-icon.png" alt="profile picture">
+            </div>
+        </div>
+    </header>
+
+    <!-- Markup for the hero section  -->
+    <section class="hero-section container">
+        <h1>Discover Podcasts</h1>
+        <p>Find your next favorite show from our curated collection </p>
+    </section>
+
+    <!-- Markup for the filter/search bar  -->
+    <section class="filter container">
+        <div class="searchBar-container">
+            <img src="images/search-icon.png" alt="search icon">
+            <input type="text" placeholder="Search podcasts..." class="search-bar">
+        </div>
+        <div class="dropdown-menus">
+            <!-- Genre Dropdown -->
+            <select id="genre-select" name="genre">
+                <option value="">Genre</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+            </select>
+
+            <!-- Sort Dropdown -->
+            <select id="sort-select" name="sort">
+                <option value="">Sort By</option>
+                <option value="latest">Latest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Markup for the podcast card  -->
+    <section class="podcast-card container">
+        <!-- this card will be dynamicaly added by the podcast modal -->
+    </section>
+
+    <!-- Markup for Modal Structure -->
+    <section id="podcastModal" class="modal">
+        <div class="modal-content">
+            <div class="modalContent-header">
+                <h2 id="modalTitle">Podcast Title</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <hr class="line-diveder">
+            <div class="modalContent-info">
+                <img id="modalImage" src="" alt="Podcast Image" />
+                <div class="modalContent-details">
+                    <div id="modalGenres" class="genres"></div>
+                    <p id="modalLastUpdated">Last updated: <span></span></p>
+                    <div id="modalSeasons" class="seasons"></div>
+                    <p id="modalDescription">Podcast description goes here.</p>
+                    <button id="viewMoreBtn" class="view-more-btn">View More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fullScreenModal" class="full-screen-modal">
+        <div class="full-screen-modal-content">
+            <div class="full-screen-modal-header">
+                <button id="backToPodcastBtn" class="back-btn">&lt; Back to Podcast</button>
+            </div>
+            <div class="podcast-info-section">
+                <img id="fullScreenModalImage" src="" alt="Podcast Image">
+                <div class="podcast-info-text">
+                    <h2 id="fullScreenModalTitle">Podcast Title</h2>
+                    <div id="fullScreenModalGenres" class="genres"></div>
+                    <p id="fullScreenModalLastUpdated">Last updated: <span></span></p>
+                    <div id="fullScreenModalSeasons" class="seasons"></div>
+                    <p id="fullScreenModalDescription">Podcast description goes here.</p>
+                </div>
+            </div>
+            <div class="seasons-episodes-section">
+                <h3>Seasons and Episodes</h3>
+                <div id="seasonsContainer" class="seasons-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>The podcast<span>Hub</span></strong></p>
+        <p>Conversations that spark curiosity and creativity</p>
+        <p>&copy; 2025 The podcast<span>Hub</span> . All rights reserved.
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
