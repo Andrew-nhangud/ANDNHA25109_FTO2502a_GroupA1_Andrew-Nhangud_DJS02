@@ -1,4 +1,4 @@
-main.js; // js/main.js
+// js/main.js
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     // Import all necessary modules at the start
